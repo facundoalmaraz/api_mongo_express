@@ -21,6 +21,12 @@ const User = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "Roles",
     },
+    task: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Tasks",
+        },
+    ],
 },{
     timestamps: true,
     versionKey: false,

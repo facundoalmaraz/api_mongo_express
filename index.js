@@ -5,7 +5,7 @@ import userRoutes from "./routes/userRoutes.js";
 import taskRoutes from "./routes/taskRoutes.js";
 import roleRoutes from "./routes/roleRoutes.js";
 
-import checkAuth from "./middlewares/checkAuth.js";
+import checkMethod from "./middlewares/checkMethod.js";
 
 dotenv.config();
 
@@ -18,7 +18,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use("/api/roles", roleRoutes);
 app.use("/api/users", userRoutes);
-app.use("/api/tasks", checkAuth, taskRoutes);
+app.use("/api/tasks",checkMethod , taskRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
