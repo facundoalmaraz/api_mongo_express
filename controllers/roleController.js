@@ -1,4 +1,4 @@
-import Roles from "../models/Roles.js";
+import Roles from "../models/Role.js";
 
 export const createRole = async (req, res) => {
   const { name, description } = req.body;

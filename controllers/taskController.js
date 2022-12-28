@@ -1,4 +1,4 @@
-import Tasks from "../models/Tasks.js";
+import Tasks from "../models/Task.js";
 
 export const createTask = async (req, res) => {
     const { name, description } = req.body;
